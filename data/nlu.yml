@@ -1,0 +1,58 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: affirm
+  examples: |
+    - Yes
+    - Yes please
+    - Please tell me
+    - Please
+
+- intent: deny
+  examples: |
+    - No
+    - Dont
+    - No I dont want
+    - Nop
+
+- intent: talkToLLm
+  examples: |
+    - I want to tallk to your LLM
+    - llm er shate kotha bolbo
+    - llm er kache transfer koren
+    - I want to talk to the llm
+    - llm er kache den
+    - 123_hello how are you
+    - 123_hi
+    - 123_who is the prime minister of bangladesh
+    - 123_capital of dhaka?
+    - 123_what is inbound call?
+    - 123_what services does gsl provides?
+    - 123_who is the ceo of gsl?
+    - 123_tell me more about genuity systems ltd
+    - 123_what is Gplex Ai Voicebot
+    - 123_whatsup
+    - 123_if there are 2 apples 1 i is lost how many left?
+    - 123_i have 100000 taka and I want only the outbound service is it possible?
+    - 123_can you show demo of you inbound?
+    - 123_ i want to see demo
+    - 123_ show me the demo if outbound call
+    - 123_ tell me more about your company
+    - 123_tell me more about gsl
+    - 123_where are you located

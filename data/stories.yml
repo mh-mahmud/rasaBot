@@ -1,0 +1,43 @@
+version: "2.0"
+
+stories:
+
+- story: Services
+  steps:
+  - intent: greet
+  - action: utter_atStart
+  - or:
+    - intent: our_services
+    - intent: demo
+    - intent: solution
+    - intent: about_us
+    - intent: exit
+  - action: action_options1
+  - or:
+    - intent: banking
+    - intent: voice
+    - intent: messaging
+    - intent: contact_center
+    - intent: exit
+  - action: action_options2
+  - or:
+    - intent: chatbot
+    - intent: inbound
+    - intent: outbound
+    - intent: reporting
+  - action: action_options3
+
+
+- story: talk to llm
+  steps:
+  - intent: talkToLLm
+  - action: action_utter_talkllm
+  
+  # - action: talk_to_llm_form
+  # - active_loop: talk_to_llm_form
+  # - slot_was_set:
+  #   - requested_slot: end_llm
+  # - active_loop: null
+  
+
+

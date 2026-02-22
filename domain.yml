@@ -1,0 +1,244 @@
+version: "2.0"
+
+intents:
+  - greet
+  - our_services
+  - about_us
+  - exit
+  - voice
+  - messaging
+  - contact_center
+  - main_menu
+  - speech_to_text
+  - text_to_speech
+  - voice_assistant
+  - ai_chatbot
+  - inbound
+  - outbound 
+  - reporting
+  - acd
+  - ivr
+  - sivr
+  - cti
+  - predictive_dialer
+  - progressive_dialer
+  - auto_dialer
+  - call_blaster
+  - dashboard
+  - wallboard
+  - unified_reporting
+  - other_report
+  - demo
+  - solution
+  - deny
+  - banking
+  - insurance
+  - other
+  - chatbot
+  - voicebot_disha
+  - talkToLLm
+
+actions:
+  - action_options1
+  - action_options2
+  - action_options3
+  - validate_detail_form
+  - validate_talk_to_llm_form
+  - action_utter_talkllm
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_atStart:
+  - text: "Hi there, Welcome to gPlex AI! Nice to meet you. I'd love to help you out:
+What would you like to know? Choose one of the options below:"
+    buttons:
+    - title: "Explore our products and solutions"
+      payload: "/our_services"
+    - title: "I would like to see a demo"
+      payload: "/demo"
+    - title: "Help me with a solution for my business"
+      payload: "/solution"
+    - title: "About Us"
+      payload: "/about_us"
+    - title: "Exit"
+      payload: "/exit"
+  
+  utter_solution:
+  - text: "We would love to help you please select an option"
+    buttons:
+    - title: "Banking"
+      payload: "/banking"
+    - title: "Insurance"
+      payload: "/insurance"
+    - title: "Contact centre AI"
+      payload: "/contact_centre_ai"
+    - title: "Other"
+      payload: "/other"
+    - title: "Main Menu"
+      payload: "/greet"
+    - title: "Exit"
+      payload: "/exit"
+  
+  utter_banking:
+  - text: "This are our state of the art technologies for banking"
+    buttons:
+    - title: "ChatBot"
+      payload: "/chatbot"
+    - title: " Voicebot (Disha)"
+      payload: "/voicebot_disha"
+  
+  utter_chatbot:
+  - text: "gPlex chatbot is pre-integrated with popular Banking solutions such as FAQ, Daily Customer Query, etc you can launch chatbot across multiple channels with languages supporint English, Bengali, Mixed."
+
+  utter_our_services:
+  - text: "Awesome, we have a wide suite of products to help you step up your customer service and stand out! What kind of services are you looking for?"
+    buttons:
+    - title: "Voice"
+      payload: "/voice"
+    - title: "Messaging"
+      payload: "/messaging"
+    - title: "Contact Center"
+      payload: "/contact_center"
+    - title: "Main Menu"
+      payload: "/greet"
+    - title: "Exit"
+      payload: "/exit"
+    
+  utter_voice:
+  - text: "Which services are you interested to know more about?"
+    buttons:
+    - title: "Speech To Text"
+      payload: "/speech_to_text"
+    - title: "Text To Speech"
+      payload: "/text_to_speech"
+    - title: "Voice Assistant"
+      payload: "/voice_assistant"
+    - title: "Main Menu"
+      payload: "/greet"
+    - title: "Exit"
+      payload: "/exit"
+  
+  utter_messaging:
+  - text: "Which services are you interested to know more about?"
+    buttons:
+    - title: "AI Chatbot"
+      payload: "/ai_chatbot"
+    - title: "Main Menu"
+      payload: "/greet"
+    - title: "Exit"
+      payload: "/exit"
+  
+  utter_contact_center:
+  - text: "Which services are you interested to know more about?"
+    buttons:
+    - title: "Inbound"
+      payload: "/inbound"
+    - title: "Outbound"
+      payload: "/outbound"
+    - title: "Reporting"
+      payload: "/reporting"
+    - title: "Main Menu"
+      payload: "/greet"
+    - title: "Exit"
+      payload: "/exit"
+  
+  utter_inbound:
+  - text: "Okay, Which service do you want?"
+    buttons:
+    - title: "ACD"
+      payload: "/acd"
+    - title: "IVR"
+      payload: "/ivr"
+    - title: "SIVR"
+      payload: "/sivr"
+    - title: "CTI"
+      payload: "/cti"
+    - title: "Main Menu"
+      payload: "/greet"
+    - title: Exit
+      payload: "/exit"
+  
+  utter_outbound:
+  - text: "Okay, Which service do you want?"
+    buttons:
+    - title: "Predictive Dialer"
+      payload: "/predictive_dialer"
+    - title: "Progressive Dialer"
+      payload: "/progressive_dialer"
+    - title: "Auto Dialer"
+      payload: "/auto_dialer"
+    - title: "Call Blaster"
+      payload: "/call_blaster"
+    - title: "Main Menu"
+      payload: "/greet"
+    - title: Exit
+      payload: "/exit"
+  
+  utter_reporting:
+  - text: "Okay, Which service do you want?"
+    buttons:
+    - title: "Dashboard"
+      payload: "/dashboard"
+    - title: "Wallboard"
+      payload: "/wallboard"
+    - title: "Unified Reporting"
+      payload: "/unified_reporting"
+    - title: "Other Report"
+      payload: "/other_report"
+    - title: "Main Menu"
+      payload: "/greet"
+    - title: Exit
+      payload: "/exit"
+  
+  utter_ask_name:
+  - text: "Please tell me your name"
+
+  utter_ask_number:
+  - text: "Please type your mobile number"
+
+  utter_ask_company_name:
+  - text: "Please tell me your Company name"
+  
+  utter_about_us:
+  - text: "Gplex AI is a leading player in the AI industry, specializing in Automatic Speech Recognition (ASR) and Natural Language Processing (NLP). Our mission is to revolutionize communication by enhancing the way humans interact with technology. We excel in tailoring ASR and NLP solutions for diverse industries, driven by a passion for innovation and excellence. Join us on this AI journey to explore new horizons in technology and redefine conversations."
+
+entities:
+- end_llm
+
+slots:
+  name:
+    type: text
+    influence_conversation: true
+  number:
+    type: text
+    influence_conversation: true
+  company_name:
+    type: text
+    influence_conversation: true
+  end_llm:
+    type: text
+    influence_conversation: false
+
+
+forms:
+  detail_form:
+    required_slots:
+      name:
+        - type: from_text
+      number:
+        - type: from_text
+      company_name:
+        - type: from_text
+  
+  talk_to_llm_form:
+    required_slots:
+      end_llm:
+      - entity: end_llm
+        type: from_text
+        
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
